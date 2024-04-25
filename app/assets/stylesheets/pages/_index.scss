@@ -1,2 +1,23 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.button-back{
+  width: 70px;
+  height: 50px;
+  border-radius: 12px;
+  background-color: $blue;
+  color: $white;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 15px $black;
+  transition: 0.3s;
+  margin-bottom: 12px;
+
+  &:hover{
+    background-color: $white;
+    color: $blue;
+    border: 2px solid $blue;
+  }
+}

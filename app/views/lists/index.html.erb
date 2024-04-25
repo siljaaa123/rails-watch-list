@@ -1,0 +1,19 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
+  <div class="container">
+    <h1>Save all your favorite <em>movies</em> </h1>
+    <p>Share your lists with your friends and families</p>
+  </div>
+</div>
+<div class="container">
+  <div class="title-area">
+    <h1>My Lists</h1>
+    <%= link_to "add new list", new_list_path, class: "btn btn-primary" %>
+  </div>
+  <div class="cards">
+    <% @lists.each do |list| %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+        <%= link_to list.name, list_path(list) %>
+      </div>
+    <% end %>
+  </div>
+</div>

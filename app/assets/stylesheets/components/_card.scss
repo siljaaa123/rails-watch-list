@@ -1,0 +1,96 @@
+.card-product {
+  overflow: hidden;
+  height: 140px;
+  background: $white;
+  box-shadow: 0 0 15px $black;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  border-radius: 12px;
+
+  img {
+    width: 120px;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 1.4;
+    color: $grey;
+    margin-bottom: 0;
+    margin-top: 8px;
+  }
+
+  &:hover {
+    transform: translate3D(0,-1px,0) scale(1.03);
+    box-shadow: 8px 28px 50px rgba(39,44,49,.07), 1px 6px 12px rgba(39,44,49,.04);
+    transition: all .4s ease; /* zoom in */
+    cursor: pointer;
+  }
+
+
+  .card-product-infos {
+    padding: 16px;
+    position: relative;
+    flex-grow: 1;
+
+    .button{
+      position: absolute;
+      top: 5px;
+      right: 15px;
+    }
+
+  }
+}
+
+.container {
+  h1{
+    padding: 24px 0 12px 0;
+  }
+}
+
+
+
+// INDEX
+
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  flex-grow: 1;
+  margin-bottom: 12px;
+
+  .card-category{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+    height: 200px;
+    width:300px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      transform: translate3D(0,-1px,0) scale(1.03);
+      box-shadow: 8px 28px 50px rgba(39,44,49,.07), 1px 6px 12px rgba(39,44,49,.04);
+      transition: all .4s ease; /* zoom in */
+      cursor: pointer;
+    }
+
+    a{
+      text-decoration:none;
+      color: $white;
+      font-size: 24px;
+    }
+  }
+}
