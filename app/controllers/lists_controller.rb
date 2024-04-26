@@ -21,9 +21,30 @@ class ListsController < ApplicationController
     end
   end
 
+  def image
+    @list = List.find(params[:id])
+
+    # if @list.save
+    #   redirect_to lists_path
+    # else
+    #   render :image, status: :unprocessable_entity
+    # end
+  end
+
+  def update
+    #  for the image to be uploaded to cloudinary
+    @list = List.find(params[:id])
+
+    if @list.update(list_params)
+      redirect_to list_path(@list)
+    else
+      render :image, status: :unprocessable_entity
+    end
+  end
+
   private
 
   def list_params
-    params.require(:list).permit(:name, :bookmarks, :movies)
+    params.require(:list).permit(:name, :bookmarks, :movies, :image)
   end
 end
