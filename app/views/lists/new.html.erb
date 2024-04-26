@@ -1,9 +1,23 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+    <%= link_to lists_path, class: "navbar-brand" do %>
+      <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
+    <% end %>
+    <div id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <%= image_tag "https://avatars.githubusercontent.com/u/153533899?v=4", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
 <div class="container">
   <h1>Add new list</h1>
 
   <%= simple_form_for(@list) do |f| %>
     <%= f.input :name %>
     <%= f.submit class: "btn btn-primary" %>
-    <%= link_to "Back", lists_path, class: "button" %>
   <% end %>
 </div>

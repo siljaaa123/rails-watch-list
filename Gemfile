@@ -36,6 +36,9 @@ gem "sassc-rails"
 # faker gem
 gem 'faker'
 
+#  security gem that keys are not shared in github
+  gem "dotenv-rails"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 

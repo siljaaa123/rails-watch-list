@@ -65,8 +65,9 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
-  flex-grow: 1;
   margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
 
   .card-category{
     background-size: cover;
