@@ -6,6 +6,7 @@ class ListsController < ApplicationController
   def show
     @list = List.find(params[:id])
     @movies = Movie.all
+    @bookmark = Bookmark.new
   end
 
   def new
@@ -23,12 +24,6 @@ class ListsController < ApplicationController
 
   def image
     @list = List.find(params[:id])
-
-    # if @list.save
-    #   redirect_to lists_path
-    # else
-    #   render :image, status: :unprocessable_entity
-    # end
   end
 
   def update
